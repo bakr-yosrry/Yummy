@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="./css/all.min.css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+
+  <nav id="sideNav" class="d-flex flex-column justify-content-between align-items-center">
+    <img src="./imgs/logo.png" alt="Yummy" class="logo" />
+    <div class="mt-6"><i id="toggleBtn" class="fa-solid fa-bars fa-2x" style="color: #000;"></i></div>
+    <div class="d-flex flex-column p-2" style="margin-top:auto;">
+      <i class="fa-solid fa-globe d-block pb-2"></i>
+      <i class="fa-solid fa-share-nodes"></i>
+    </div>
+  </nav>
+
+  <div id="blackList" class="d-flex flex-column justify-content-between ">
+    <ul class="nav-links" >
+      <li id="linkSearch">Search</li>
+      <li id="linkCategories">Categories</li>
+      <li id="linkArea">Area</li>
+      <li id="linkIngredients">Ingredients</li>
+      <li id="linkContact">Contact Us</li>
+    </ul>
+    <div style="padding: 15px 20px;">
+      <div class="icons">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-solid fa-globe"></i>
+      </div>
+      <div class="footer">
+        <p>Copyright Â© 2019 All Rights <br>Reserved.</p>
+      </div>
+    </div>
+  </div>
+  <!------------------ search -------------------->
+  <div id="searchSection" class="container my-4" style="display:none;">
+  <div class="row">
+    <div class="col-md-6 mb-2">
+      <input type="text" id="searchByName" class="form-control text-white" placeholder="Search by Meal Name" style="background-color: #0D0D0D;">
+    </div>
+    <div class="col-md-6 mb-2">
+      <input type="text" id="searchByLetter" class="form-control text-white" maxlength="1" placeholder="Search by First Letter" style="background-color: #0D0D0D;">
+    </div>
+  </div>
+</div>
+<!------------------ home -------------------->
+<div class="container my-4">
+  <div class="row " id="mealsGrid">
+  
+  </div>
+</div>
+<!------------------ meal -------------------->
+<div id="mealOverlay" style="display:none;">
+  <div id="mealContent">
+    <span id="closeMeal">&times;</span>
+    <div id="mealDetails" class="pop">
+      
+    </div>
+  </div>
+</div>
+
+<!------------------ contact us -------------------->
+
+<div id="signupForm" class="container mt-5" style="display:none;">
+  <div class="col-md-6 mx-auto">
+    <input id="nameInput" type="text" class="form-control my-2" placeholder="Enter Your Name">
+    <p id="nameMsg" class="text-danger small d-none">Name must be 3–20 letters only</p>
+
+    <input id="emailInput" type="email" class="form-control my-2" placeholder="Enter Your Email">
+    <p id="emailMsg" class="text-danger small d-none">Invalid email format</p>
+
+    <input id="phoneInput" type="text" class="form-control my-2" placeholder="Enter Your Phone">
+    <p id="phoneMsg" class="text-danger small d-none">Phone must be Egyptian (010/011/012/015)</p>
+
+    <input id="passwordInput" type="password" class="form-control my-2" placeholder="Enter Password">
+    <p id="passwordMsg" class="text-danger small d-none">Min 6 chars includes letters & numbers</p>
+    <input id="rePasswordInput" type="password" class="form-control my-2" placeholder="Re-enter Password">
+    <p id="rePasswordMsg" class="text-danger small d-none">Passwords do not match</p>
+    <button id="signupBtn" class="btn btn-primary w-100 mt-2" disabled>Sign Up</button>
+  </div>
+</div>
+
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/index.js"></script>
+</body>
+</html>
