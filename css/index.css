@@ -1,0 +1,259 @@
+.logo {
+  width: 50px;
+  margin-top: 20px;
+}
+
+body {
+  margin: 0;
+  background-color: #0D0D0D;
+  font-family: sans-serif;
+}
+
+#sideNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 100vh;
+  background-color: #fff;
+  padding-top: 20px;
+  z-index: 1000;
+  transform: translateX(0);
+  transition: transform 0.4s ease;
+}
+
+#sideNav.open {
+  transform: translateX(250px);
+}
+
+
+#toggleBtn {
+  font-size: 26px;
+  cursor: pointer;
+  user-select: none;
+}
+
+#blackList.open {
+  left: 0;
+}
+
+.mt-6 {
+  margin-top: 30vh;
+}
+
+#blackList {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100vh;
+  background-color: #0D0D0D;
+  color: #fff;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: left 0.4s ease;
+  z-index: 999;
+}
+
+#blackList ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#blackList li {
+  padding: 15px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #fff;
+  transition: background 0.3s ease;
+}
+
+#blackList .icons i {
+  margin-right: 10px;
+  color: #fff;
+}
+
+#blackList .footer p {
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+.meal-card {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.meal-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.meal-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.meal-card img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.meal-card .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.meal-card:hover .overlay {
+  opacity: 1;
+}
+
+#mealOverlay {
+  position: fixed;
+  top: 0;
+  left: 60px;
+  width: calc(100% - 60px);
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+  justify-content: center;
+  align-items: flex-start;
+  overflow-y: auto;
+  z-index: 800;
+}
+
+.bod {
+  color: #055160;
+  padding: 10px 15px;
+  border-radius: 8px;
+  display: inline-block;
+
+  background-color: #b6effb;
+  margin-top: 10px;
+
+}
+
+#sideNav {
+  z-index: 2000;
+}
+
+#mealContent {
+
+  padding-left: 50px;
+}
+
+#mealDetails img {
+  width: 100%;
+  height: 80%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+#mealDetails {
+  background-color: black;
+  height: 100vb;
+  width: 100%;
+  color: white;
+}
+
+.pop {
+  display: flex;
+  gap: 50px;
+}
+
+#mealDetails a {
+  text-decoration: none;
+  color: white;
+}
+
+
+.meal-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.meal-card img {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.meal-card .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  background-color: rgba(249, 246, 246, 0.792);
+  color: black;
+  padding: 15px;
+  transition: top 0.3s ease;
+  overflow-y: auto;
+}
+
+.meal-card:hover .overlay {
+  top: 0;
+}
+
+.category-card {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.category-card img {
+  width: 100%;
+  display: block;
+}
+
+.category-card .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  background-color: rgba(249, 246, 246, 0.792);
+  color: black;
+  padding: 15px;
+  transition: top 0.3s ease;
+  overflow-y: auto;
+}
+
+.category-card:hover .overlay {
+  top: 0;
+}
+
+.category-card .overlay h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.category-card .overlay p {
+  font-size: 0.9rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+#signupForm {
+  display: none;
+}
